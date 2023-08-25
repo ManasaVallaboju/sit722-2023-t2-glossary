@@ -7,135 +7,29 @@
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= subheading %></p>
-    <html>
-<body>
     <table>
-        <tr>
-            <th> # </th>
-            <th> Term </th>
-            <th> Description </th>
-            <th> Reference </th>
+        <tr style= "font-style: bold;background-color:rgb(162, 100, 237); ">
+          <th >ID# </th>
+          <th>Term</th>
+          <th style = "width: max-content;">Description</th>
+          <th>Reference</th>
         </tr>
-        <tr>
-            <td> 1. </td>
-            <td> DevOps </td>
-            <td> is a set of practices, tools, and a cultural philosophy that automate and integrate the processes between software development and IT teams. It emphasizes team empowerment, cross-team communication and collaboration, and technology automation. </td>
-            <td> atlassian. (n.d.). DevOps. Available at: https://www.atlassian.com/devops</td>
+        <% names.forEach((name) =>{ %>
+          <tr>
+        <td>
+          <%= name.Id %>
+        </td>
+        <td>
+          <%= name.Term %>
+        </td>
+        <td>
+          <%= name.Description %>
+        </td>
+        <td>
+          <%= name.reference %>
+        </td>
         </tr>
-        <tr>
-            <td> 2. </td>
-            <td> The Wall of Confusion </td>
-            <td> It refers to the phenomena where one group in a value stream approaches their job as complete when they have passed it onto the next group. </td>
-            <td> Stephen Kawaguchi. (2020, feb 28). https://levelup.gitconnected.com/the-wall-of-confusion-623057a4dd26</td>
-        </tr>
-        <tr>
-            <td> 3. </td>
-            <td> UX </td>
-            <td> UX design is the design of the elements that determine the interaction a user has with a product or service.  </td>
-            <td>  EMILY STEVENS, (2023). BLOG - UX Design. Available at: https://careerfoundry.com/en/blog/ux-design/what-is-user-experience-ux-design-everything-you-need-to-know-to-get-started/</td>
-        </tr>
-        <tr>
-            <td> 4. </td>
-            <td> Nodejs </td>
-            <td> Is an open-source and cross-platform JavaScript runtime environment. It is a popular tool for almost any kind of project! </td>
-            <td> Nodejs. (2020). Introduction to Node.js . Available at: https://nodejs.dev/en/learn/</td>
-        </tr>
-        <tr>
-            <td> 5. </td>
-            <td> Agile methodology </td>
-            <td> is a project management framework that breaks projects down into several dynamic phases, commonly known as sprints. </td>
-            <td> Sarah.L . (2022). What is Agile methodology? (A beginners guide). Available at: https://asana.com/resources/agile-methodology</td>
-        </tr>
-        <tr>
-            <td> 6. </td>
-            <td> Jira Software </td>
-            <td> Jira adapts to the way you work, not the other way around. Start simple, customize as you go.</td>
-            <td> atlassian (n.d.). Best software development tool used by agile teams. Available at: https://www.atlassian.com/software/jira</td>
-        </tr>
-        <tr>
-            <td> 7. </td>
-            <td> boilerplates </td>
-            <td> is a template or a set of files that provide a foundation for any website. </td>
-            <td> freecodecamp (2018). What is boilerplate and why do we use it? Necessity of coding style guide. https://www.freecodecamp.org/news/whats-boilerplate-and-why-do-we-use-it-let-s-check-out-the-coding-style-guide-ac2b6c814ee7/.</td>
-        </tr>
-        <tr>
-            <td> 8. </td>
-            <td> Scalability </td>
-            <td> is the property of a system to handle a growing amount of work. One definition for software systems specifies that this may be done by adding resources to the system. </td>
-            <td> wikipedia (n.d.) . Available at:https://en.wikipedia.org/wiki/Scalability. Accessed on 23/07/2023.</td>
-        </tr>
-        <tr>
-            <td> 9. </td>
-            <td> Kanban Cards </td>
-            <td> A kanban card is a visual representation of an item of work. It’s an essential component of kanban, a work management framework that helps you visualize your work, limit work in progress, and maximize efficiency. </td>
-            <td> MAX REHKOPF. (2020). The Wall of Confusion: DevOps Essentials. Available at: https://www.atlassian.com/agile/kanban/cards</td>
-        </tr>
-        <tr>
-            <td> 10. </td>
-            <td> Scrum </td>
-            <td> Scrum is an agile project management framework that helps teams structure and manage their work through a set of values, principles, and practice. </td>
-            <td> atlassian .(n.d). A Beginner’s Guide to Scrum . Available at: https://www.atlassian.com/agile/scrum.</td>
-        </tr>
-        <tr>
-            <td> 11. </td>
-            <td> CI/CD tools </td>
-            <td> is a method to frequently deliver apps to customers by introducing automation into the stages of app development. </td>
-            <td> RedHat. (n.d.). CI/CD. Available at: https://www.redhat.com/en/topics/devops/what-is-ci-cd</td>
-        </tr>
-        <tr>
-            <td> 12. </td>
-            <td> Asana </td>
-            <td> The best platform for cross-functional work, easy to organize and deliver quality work, faster. </td>
-            <td> Asana. (2023). https://asana.com/</td>
-        </tr>
-        <tr>
-            <td> 13. </td>
-            <td> IntelliJ IDEA </td>
-            <td> The IDE that makes development a more productive and enjoyable experience.  </td>
-            <td> IntelliJ IDEA (2023). Available at: https://www.jetbrains.com/idea/</td>
-        </tr>
-        <tr>
-            <td> 14. </td>
-            <td> Junit </td>
-            <td> JUnit is a simple framework to write repeatable tests. It is an instance of the xUnit architecture for unit testing frameworks. </td>
-            <td> Junit. (2013). About Junit. Available at:https://junit.org/junit4/ </td>
-        </tr>
-        <tr>
-            <td> 15. </td>
-            <td> Pytest </td>
-            <td> The pytest framework makes it easy to write small, readable tests, and can scale to support complex functional testing for applications and libraries. </td>
-            <td> holger krekel and pytest-dev team. (2015). Pytest  (A beginners guide). Available at: https://docs.pytest.org/en/7.4.x/</td>
-        </tr>
-        <tr>
-            <td> 16. </td>
-            <td> Selenium </td>
-            <td> Selenium is an automation testing tool for web applications. It is a free source automation testing tool that is used to automate tests on web browsers..</td>
-            <td> MindMajix Technologies (2013-2023) Introduction to Selenium. Available at: https://mindmajix.com/what-is-selenium</td>
-        </tr>
-        <tr>
-            <td> 17. </td>
-            <td> Puppet </td>
-            <td> Puppet enables you to deploy and manage infrastructure with confidence. </td>
-            <td> Perforce (n.d ). Puppet . https://www.puppet.com/.</td>
-        </tr>
-        <tr>
-            <td> 18. </td>
-            <td> ELK </td>
-            <td> "ELK" is the acronym for three open source projects: Elasticsearch, Logstash, and Kibana. Elasticsearch is a search and analytics engine. Logstash is a server‑side data processing pipeline that ingests data from multiple sources simultaneously, transforms it, and then sends it to a "stash" like Elasticsearch. Kibana lets users visualize data with charts and graphs in Elasticsearch. </td>
-            <td> Elastic (n.d.) . Available at:https://www.elastic.co/what-is/elk-stack. Accessed on 23/07/2023.</td>
-        </tr>
-        <tr>
-            <td> 19. </td>
-            <td> Prometheus</td>
-            <td> Prometheus is an open-source systemsmonitoring and alerting toolkit originally built atSoundCloud. </td>
-            <td> . (2023).What is Prometheus Available at: https://prometheus.io/docs/introduction/overview/</td>
-        </tr>
-        <tr>
-            <td> 20. </td>
-            <td> Grafana</td>
-            <td> Grafana allows you to query, visualize, alert on, and understand your metrics no matter where they are stored. Create, explore, and share beautiful dashboards with your team </td>
-            <td> Grafana Labs .(n.d). . Available at:https://grafana.com/ .</td>
-        </tr>
-    </table>
-  </body>
-</html>
+        <%  } ) %>
+      </table>
+    </body>
+  </html>
