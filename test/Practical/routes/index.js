@@ -21,20 +21,23 @@ const nameList = [
   {'Id':17, 'Term':'Docker', 'Description': 'Docker is a platform that enables developers to develop, ship, and run applications in containers. Containers are lightweight and portable environments that package together an applications code, runtime, libraries, and dependencies, allowing it to run consistently across different computing environments', 'reference':'Pethuru Raj, Learning Docker. 2017.'},
   {'Id':18, 'Term':'Asana', 'Description': 'Open source projects make their source code available to the public, allowing anyone to view, modify, and distribute the code according to the terms of the projects license.', 'reference':'ibrary And Information Technology Association (É.-U, Open source software for libraries : an open source for libraries collaboration. Chicago: Lita, 2002.'},
   {'Id':19, 'Term':'IntelliJ IDEA', 'Description': 'The IDE that makes development a more productive and enjoyable experience.','reference':' IntelliJ IDEA (2023). Available at: https://www.jetbrains.com/idea'},
-  {'Id':20, 'Term':'DBMS', 'Description': 'DBMS stands for "Database Management System." Its a software system designed to manage, store, retrieve, and manipulate data in a structured and organized way. A DBMS provides an interface for users and applications to interact with databases, ensuring data integrity, security, and efficient data management.', 'reference':'B. L. Larson, SQL solutions for IBM DBMS. New York: Vnr Van Nostrand Reinhold, 1991.'}
+  {'Id':20, 'Term':'DBMS', 'Description': 'DBMS stands for "Database Management System." Its a software system designed to manage, store, retrieve, and manipulate data in a structured and organized way. A DBMS provides an interface for users and applications to interact with databases, ensuring data integrity, security, and efficient data management.', 'reference':'B. L. Larson, SQL solutions for IBM DBMS. New York: Vnr Van Nostrand Reinhold, 1991.'}, 
+  {'Id': 21, 'Term':'Docker','Description':'Docker is a PaaS product that uses OS-level virtualization to deliver software in containers, with free and premium tiers. Docker Engine hosts containers, automating application deployment in lightweight containers for efficient isolation.','reference':'Docker, “Docker overview,” Docker Documentation, Apr. 09, 2020. https://docs.docker.com/get-started/overview/'},
+  {'Id': 22, 'Term':'Docker Compose','Description':'Compose is a Docker tool that defines and runs multi-container applications using a YAML file, managing application lifecycle, service status, and variables across various environments.','reference':'Docker, “Overview of Docker Compose,” Docker Documentation, Feb. 10, 2020. https://docs.docker.com/compose/'},
+  {'Id': 23, 'Term':'Image','Description':'Docker images are files used to execute code in a Docker container, acting as instructions and starting points. They have multiple layers, speeding up builds, increasing reusability, and decreasing disk use. Once created, a writable layer allows user changes.','reference':'What is a Docker Image? Introduction and use cases,” SearchITOperations. https://www.techtarget.com/searchitoperations/definition/Docker-image'},
+  {'Id': 24, 'Term':'Dockerfile','Description':'Building a Docker image is explained in detail in a text file, along with how to install dependencies, set up the environment, and make additional configurations.','reference':'Docker Documentation, Aug. 08, 2019. https://docs.docker.com/engine/reference/builder/'},
+  {'Id': 25, 'Term':'Container','Description':'A container is a runnable image instance, accessible via the Docker API or CLI, defined by its image and configuration options, and its state changes upon removal.','reference':'Docker overview,” Docker Documentation, Aug. 22, 2023. https://docs.docker.com/get-started/overview/#containers (accessed Aug. 23, 2023).'},
+  {'Id': 26, 'Term':'Registry','Description':'An archive for distributing and keeping Docker images. A well-known public registry is Docker Hub, and secure image storage can also be achieved through the creation of private registries.','reference':'Docker Registry,” Docker Documentation, Apr. 23, 2021. https://docs.docker.com/registry/'},
+  {'Id': 27, 'Term':'Repository','Description':'Docker Registry is a server-side application that stores and manages Docker images, serving as a central hub for sharing and distributing them, particularly Docker Hub','reference':'Create repositories,” Docker Documentation, Aug. 22, 2023. https://docs.docker.com/docker-hub/repos/create/ (accessed Aug. 23, 2023).'},
+  {'Id': 28, 'Term':'Docker build','Description':'The docker build command generates a Docker image from a specified Dockerfile, with options like -t, build-arg, or -f, and a build context specified by PATH | URL.','reference':'S. James, “Docker Build: A Beginner’s Guide to Building Docker Images,” Stackify, Jul. 12, 2019. https://stackify.com/docker-build-a-beginners-guide-to-building-docker-images/'},
+  {'Id': 29, 'Term':'Docker Run','Description':'The docker run command creates a new container from a Docker image, allowing configuration and management options like detaching, publishing, name, environment variables, volume mount, network connection, and interactive session start.','reference':'S. James, “Docker Build: A Beginner’s Guide to Building Docker Images,” Stackify, Jul. 12, 2019. https://stackify.com/docker-build-a-beginners-guide-to-building-docker-images/'},
+  {'Id': 30, 'Term':"Source Control",'Description':'Source control is a software development system that tracks changes to files and folders, enabling collaboration, code management, conflict resolution, and backup. Common systems like Git, SVN, and Mercurial provide efficient collaboration, code management, and improved software quality.','reference':'F. Santacroce author., A. Olsson, R. Voss, and J. Narębski, Git : mastering version control. Packt Publishing, 2016. Accessed: Aug. 06, 2023. [Online]. Available: https://eds.p.ebscohost.com/eds/detail/detail?vid=0&sid=a00e23bc-ed8d-4b92-b41f-9ed87c505ee1%40redis&bdata=JnNpdGU9ZWRzLWxpdmUmc2NvcGU9c2l0ZQ%3d%3d#AN=deakin.b3649851&db=cat00097a'}
   
-  ];
-
-
+];
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Sit722- - Software Deployment And Operation', subheading: 'Below is the table containing collection of DevOps terms and their descriptions with references' });
+  res.render('index', { title: 'SIT722 Devops Glossary', sub:'Welcome to mywebsite showing a collection of Devops terms and their brief description', names:nameList});
 });
 
 module.exports = router;
-
-
-
-
-
